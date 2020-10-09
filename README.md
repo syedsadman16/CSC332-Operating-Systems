@@ -3,6 +3,14 @@ A few assignments from CSC332 Operating Systems with C programming in Linux. Eac
 
 # Contents
 
+## Threads
+(Note: this assignment was written in Java, not C)
+
+Main.java
+- Develop a multithreaded app that can find the integer in the range 1 to 10000 that has the largest
+number of divisors. It should print that integer as well as the time spent to finish the calculation. You
+can use any language (e.g. C, Java, or Python)
+
 ## Process Management
 
 Task3.c
