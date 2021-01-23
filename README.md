@@ -29,7 +29,23 @@ Task2.c
 of them and creating new ones. Write a C program to implement a command called ​ printcontent t​hat takes a (text) file name as argument and display its contents. Report an appropriate message if the file does not exist or can’t
 be opened (i.e. the file doesn’t have read permission). 
 
+Task5.c
+ - Write a program that has a main Director process which reads a file containing grades for all homeworks of all chapters and creates [x] number of manager processes. Each manager processes willl create [y] number of worker processes and pass one homework to each of them and calculate and print the max and average 
 
+Task7.c 
+- Consider a system with 3 smoker processes and 1 agent process. Each smoker continuously rolls a cigarette and then smokes it. The smoker needs three ingredients: tobacco, paper, and matches. One of the smokers has paper, another has tobacco, and the third has matches. The agent has an infinite supply
+of all three materials and (randomly) places two of the ingredients on the table each time. The smoker who has the remaining ingredient then makes and smokes a cigarette, signaling the agent on completion. The agent then puts out another two of the three ingredients, and the cycle repeats.
+
+```
+gcc -o Task7 Task7.c -pthread
+```
+
+## Process Synchronization
+Task6a.c & Task6b.c
+- The given bank.c program has 3 processes namely, the ​ dad ​ process and two ​ son ​ processes. The critical section (CS) in the given problem is a son withdrawing money from the bank and the dad depositing money in the bank, at randomly selected time intervals. The program in the given form has synchronization errors, i.e., these 3 processes get into a race condition when accessing the shared bank_balance variable.
+- In ​ Step 1​ , you need to run the program and analyze the execution traces whereupon you have to identify the synchronization errors. After identifying the synchronization errors, you need to insert the "P(sem)" and "V(sem)" operations at the right places in the code that fix the synchronization errors.
+- In​ Step 2​, you work on a measurement component. A mutex algorithm is associated with a "bounded wait" property, i.e., how long a process P is forced to wait for entry into a CS after P has expressed interest in the CS. Let’s call the wait time T(P), where T(P) is the number of times processes other than P enter the CS after P expresses interest in the CS but before P actually
+enters the CS. You need to compute T(P) for all three processes in the problem and display it at the end of "N" different attempts. 
 
 
 
